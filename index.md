@@ -9,7 +9,7 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 ## About Me
 
-I am a computer science undergraduate from [BITS Pilani Goa Campus, India](). I am interested in Computer Networks, Distributed Computing and Machine Learning. This blog concerns my attempts at scraching the surface of these interesting fields. For more details about me, check this page!
+I am a computer science undergraduate from [BITS Pilani Goa Campus, India](http://universe.bits-pilani.ac.in/Goa/). I am interested in Computer Networks, Distributed Computing and Machine Learning. This blog concerns my attempts at scraching the surface of these interesting fields. For more details about me, check this page!
 
 ## Posts
 
