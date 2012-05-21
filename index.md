@@ -9,7 +9,7 @@ This blog is made using Jekyll Bootstrap and Github Pages. Complete usage and do
 
 ## About Me
 
-I am a computer science undergraduate from [BITS Pilani Goa Campus, India](http://universe.bits-pilani.ac.in/Goa/). I am interested in Computer Networks, Distributed Computing and Machine Learning. This blog concerns my attempts at scraching the surface of these interesting fields. For more details about me, check this page!
+I am a computer science undergraduate from [BITS Pilani Goa Campus, India](http://universe.bits-pilani.ac.in/Goa/). I am interested in Computer Networks, Distributed Computing and Machine Learning. This blog concerns my attempts at scraching the surface of these interesting fields. For more details about me, check [this](http://racheesingh.github.com/about.html) page!
 
 ## Posts
 
