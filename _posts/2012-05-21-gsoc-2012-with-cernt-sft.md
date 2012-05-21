@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GSoC 2012 with CERNT SFT"
+title: "GSoC 2012 with CERN SFT"
 description: ""
 category: 
 tags: [GSoC, CERN SFT]
