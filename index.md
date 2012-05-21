@@ -5,7 +5,7 @@ tagline: A Computer Science Undergraduate Student.
 ---
 {% include JB/setup %}
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+This blog is made using Jekyll Bootstrap and Github Pages. Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
 ## About Me
 
