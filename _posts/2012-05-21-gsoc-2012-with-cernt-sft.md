@@ -13,4 +13,4 @@ In this project I will be working on an algorithm that maps IP addresses of CERN
 [Here](http://www.google-melange.com/gsoc/proposal/review/google/gsoc2012/racheesingh/9002) is the project proposal I submitted for Google Summer of Code 2012.
 
 	
-Carlos Aguado Sánchez is my mentor. On this blog, I will document day-today developments of the work.
+Carlos Aguado Sánchez is my mentor. On this blog, I will document day-to-day developments of the work.
