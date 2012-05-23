@@ -18,9 +18,9 @@ The DNS contains records containing the following values:
 * MX: Mail Exchange records define the mail system for a domain.
 * NS: Name server records define name servers for a given domain.
 
-'nfslookup' is a command line utility that can be used for looking at DNS records. To obtain the utility on Arch Linux, install the package dnsutils.
+`nfslookup` is a command line utility that can be used for looking at DNS records. To obtain the utility on Arch Linux, install the package `dnsutils`.
 
-$ pacman -S dnsutils
+	$ pacman -S dnsutils
 
 ## Using nfslookup
 
