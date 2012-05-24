@@ -23,4 +23,4 @@ The DNS contains records containing the following values:
 	$ pacman -S dnsutils
 
 ## Using nfslookup
-From all the records that are stored by the DNS database, the `ping' command only looks at A records. The `nslookup` command looks at all the other records such as CNAME, MX etc.
+From all the records that are stored by the DNS database, the `ping` command only looks at A records. The `nslookup` command looks at all the other records such as CNAME, MX etc.
