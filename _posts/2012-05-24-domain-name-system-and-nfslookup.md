@@ -32,4 +32,40 @@ The DNS contains records containing the following values:
 	$ pacman -S dnsutils
 
 ## Using nslookup
-From all the records that are stored by the nameservers, the `ping` command only looks at A records. The `nslookup` command looks at all the other records such as CNAME, MX etc. For all these records, specific command line options are available. For complete information, try `man nslookup`.
+`nslookup` stands for name server lookup. It uses the entry corresponding to the local DNS nameserver present in `/etc/resolv.conf'. `nslookup` then queries the local DNS nameserver for the IP address of a certain hostname. Whereas the `ping` command only looks at A records stored by nameservers, the `nslookup` command looks at all the other records such as CNAME, MX etc. For all these records, specific command line options are available. For complete information, try `man nslookup`.
+
+Here is a simple example use:
+
+	[rachee@rachee ~]$ nslookup  www.google.com
+	Server:		121.242.190.210
+	Address:	121.242.190.210#53
+
+	Non-authoritative answer:
+	www.google.com	canonical name = www.l.google.com.
+	Name:	www.l.google.com
+	Address: 74.125.236.51
+	Name:	www.l.google.com
+	Address: 74.125.236.49
+	Name:	www.l.google.com
+	Address: 74.125.236.52
+	Name:	www.l.google.com
+	Address: 74.125.236.48
+	Name:	www.l.google.com
+	Address: 74.125.236.50
+
+The output depicts a couple of things, lets over them piece by piece:
+
+* This part of the reply,
+
+	Server:		121.242.190.210
+	Address:	121.242.190.210#53
+
+means that the DNS nameserver that is handling our query is `121.242.190.210`. No surprises here, this was just picked from the `/etc/resolv.conf` file!
+
+* 'Non-authoritative answer' means that the DNS nameserver that returned the answer to the query 'Address of www.google.com' is not authoritative for the www.google.com zone. In effect, my local DNS nameserver issued a series of queries to different nameservers to obtain a response and returned the address to me.
+
+* 'canonical name = www.l.google.com' implies that `www.google.com` is just a canonical name for `www.l.google.com`. In the process of name resolution, the nameserver authoritative for the `google.com` zone must have told my local DNS nameserver that `www.google.com` is a CNAME record for `www.l.google.com`. After receiving this answer, my local nameserver would query the `google.com` nameserver instead for the address of `www.l.google.com`. 
+
+* The rest of the reply contains all A records corresponding to `www.l.google.com`.
+
+
