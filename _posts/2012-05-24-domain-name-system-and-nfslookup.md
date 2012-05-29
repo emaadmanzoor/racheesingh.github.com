@@ -20,12 +20,12 @@ In case your ISP's nameserver does no do quick name resolution, then you might w
 
 The DNS contains records containing the following values:
 
-* Start of authority: authoritative name server for a given domain.
-* A: Address records (IP addresses for domain names)
-* CNAME: Canonical Name records provide host name aliases (alternate host names).
-* PTR: Pointer records associate a host name with a given IP address (reverse of what A records do).
-* MX: Mail Exchange records define the mail system for a domain.
-* NS: Name server records define name servers for a given domain.
+* __Start of authority__: authoritative name server for a given domain.
+* __A__: Address records (IP addresses for domain names)
+* __CNAME__: Canonical Name records provide host name aliases (alternate host names).
+* __PTR__: Pointer records associate a host name with a given IP address (reverse of what A records do).
+* __MX__: Mail Exchange records define the mail system for a domain.
+* __NS__: Name server records define name servers for a given domain.
 
 `nslookup` is a command line utility that can be used for looking at DNS records. To obtain the utility on Arch Linux, install the package `dnsutils`.
 
