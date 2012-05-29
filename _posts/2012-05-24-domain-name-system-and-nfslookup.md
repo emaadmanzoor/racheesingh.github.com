@@ -64,7 +64,7 @@ means that the DNS nameserver that is handling our query is `121.242.190.210`. N
 
 * 'Non-authoritative answer' means that the DNS nameserver that returned the answer to the query 'Address of www.google.com' is not authoritative for the www.google.com zone. In effect, my local DNS nameserver issued a series of queries to different nameservers to obtain a response and returned the address to me.
 
-* 'canonical name = www.l.google.com' implies that `www.google.com` is just a canonical name for `www.l.google.com`. In the process of name resolution, the nameserver authoritative for the `google.com` zone must have told my local DNS nameserver that `www.google.com` is a CNAME record for `www.l.google.com`. After receiving this answer, my local nameserver would query the `google.com` nameserver instead for the address of `www.l.google.com`. 
+* 'canonical name = www.l.google.com' implies that `www.google.com` is just a canonical name (or alias) for `www.l.google.com`. In the process of name resolution, the nameserver authoritative for the `google.com` zone must have told my local DNS nameserver that `www.google.com` is a CNAME record for `www.l.google.com`. After receiving this answer, my local nameserver would query the `google.com` nameserver for the address of `www.l.google.com` instead. 
 
 * The rest of the reply contains all A records corresponding to `www.l.google.com`.
 
