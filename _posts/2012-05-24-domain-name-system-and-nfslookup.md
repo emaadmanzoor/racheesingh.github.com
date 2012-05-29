@@ -36,7 +36,7 @@ The DNS contains records containing the following values:
 
 Here is a simple example use:
 
-	[rachee@rachee ~]$ nslookup  www.google.com
+	[rachee@rachee ~]$ nslookup www.google.com
 	Server:		121.242.190.210
 	Address:	121.242.190.210#53
 
@@ -57,8 +57,8 @@ The output depicts a couple of things, lets over them piece by piece:
 
 * This part of the reply,
 
-	Server:		121.242.190.210
-	Address:	121.242.190.210#53
+		Server:		121.242.190.210
+		Address:	121.242.190.210#53
 
 means that the DNS nameserver that is handling our query is `121.242.190.210`. No surprises here, this was just picked from the `/etc/resolv.conf` file!
 
