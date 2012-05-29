@@ -27,5 +27,5 @@ The idea is to help CVMFS clients connect to the mirror server closest to them, 
 
 * __BIND with ACL__
 
-I now require to read about both these implementations and weigh the pros and cons of both.
+I now require to read about these approaches, their implementation details and weigh the pros and cons of both.
 
