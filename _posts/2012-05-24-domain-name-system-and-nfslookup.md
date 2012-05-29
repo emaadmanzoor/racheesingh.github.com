@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Domain Name System and nfslookup"
+title: "Domain Name System and nslookup"
 description: ""
 category: 
-tags: [DNS, nfslookup, nameserver]
+tags: [DNS, nslookup, nameserver]
 ---
 {% include JB/setup %}
 ## Domain Name System (DNS)
@@ -31,5 +31,5 @@ The DNS contains records containing the following values:
 
 	$ pacman -S dnsutils
 
-## Using nfslookup
-From all the records that are stored by the DNS database, the `ping` command only looks at A records. The `nslookup` command looks at all the other records such as CNAME, MX etc.
+## Using nflookup
+From all the records that are stored by the nameservers, the `ping` command only looks at A records. The `nslookup` command looks at all the other records such as CNAME, MX etc. For all these records, specific command line options are available. For complete information, try `man nslookup`.
