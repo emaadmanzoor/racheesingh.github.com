@@ -32,7 +32,7 @@ The DNS contains records containing the following values:
 	$ pacman -S dnsutils
 
 ## Using nslookup
-`nslookup` stands for name server lookup. It uses the entry corresponding to the local DNS nameserver present in `/etc/resolv.conf'. `nslookup` then queries the local DNS nameserver for the IP address of a certain hostname. Whereas the `ping` command only looks at A records stored by nameservers, the `nslookup` command looks at all the other records such as CNAME, MX etc. For all these records, specific command line options are available. For complete information, try `man nslookup`.
+`nslookup` stands for name server lookup. It uses the entry corresponding to the local DNS nameserver present in `/etc/resolv.conf`. `nslookup` then queries the local DNS nameserver for the IP address of a certain hostname. Whereas the `ping` command only looks at A records stored by nameservers, the `nslookup` command looks at all the other records such as CNAME, MX etc. For all these records, specific command line options are available. For complete information, try `man nslookup`.
 
 Here is a simple example use:
 
