@@ -56,7 +56,6 @@ Here is a simple example use:
 The output depicts a couple of things, lets over them piece by piece:
 
 * This part of the reply,
-
 		Server:		121.242.190.210
 		Address:	121.242.190.210#53
 
