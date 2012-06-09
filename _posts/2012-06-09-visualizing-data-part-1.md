@@ -25,6 +25,6 @@ I have a JSON file that contains data in this format:
 I am using JavaScript along with the d3.js library. Since I am really new to JavaScript, it has taken me a while to understand how it works. I haven't quite got the tricks of the language yet, but I can comprehend bits and pieces of JavaScript code now.
 
 ## Lets Visualize
-So, here it is, the visualization:
+So, this is how the visualization looks:
 
 <img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/servers_plot.png" title="The Plot of Server Locations" align="left" width="100%"/>
