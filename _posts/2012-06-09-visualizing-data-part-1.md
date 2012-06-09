@@ -18,12 +18,13 @@ I have a JSON file that contains data in this format:
 			y:	
 		}
 
-(x,y) represents the latitude and longitude of the server's locations. These are approximate values. [Sidebar: There was also some pre-processing that had to be done to get this data, I will describe that process in another post!]
+(x,y) represents the latitude and longitude of the server's locations. These are approximate values. 
+[Sidebar: There was also some pre-processing that had to be done to get this data, I will describe that process in another post!]
 
 ## Raw Materials
 I am using JavaScript along with the d3.js library. Since I am really new to JavaScript, it has taken me a while to understand how it works. I haven't quite got the tricks of the language yet, but I can comprehend bits and pieces of JavaScript code now.
 
 ## Lets Visualize
 So, here it is, the visualization:
-<img src="https://github.com/racheesingh/racheesingh.github.com/blob/master/_posts/servers_plot.png" title="The Plot of Server Locations" align="center" />
+<img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/servers_plot.png" title="The Plot of Server Locations" align="center" />
 
