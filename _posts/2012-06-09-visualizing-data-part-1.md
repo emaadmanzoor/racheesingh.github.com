@@ -26,5 +26,4 @@ I am using JavaScript along with the d3.js library. Since I am really new to Jav
 
 ## Lets Visualize
 So, here it is, the visualization:
-<img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/servers_plot.png" title="The Plot of Server Locations" align="left" />
-
+<img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/servers_plot.png" title="The Plot of Server Locations" align="left" width="100%"/>
