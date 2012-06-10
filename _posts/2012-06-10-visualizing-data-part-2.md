@@ -32,4 +32,4 @@ A zoomed-in view of the part where most sites are clustered:
 
 
 ## The code
-The complete code for this plot along with the libraries (d3.js) are available on this Github repository.
+The complete code for this plot along with the libraries (d3.js) are available on [this](https://github.com/racheesingh/voronoi-world-map) Github repository.
