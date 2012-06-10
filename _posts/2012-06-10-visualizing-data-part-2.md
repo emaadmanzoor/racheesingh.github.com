@@ -14,7 +14,7 @@ Given a set of `n` points (or sites), a Voronoi Tessellation is a subdivision of
 ## Computing the Voronoi Polygons
 There are various algorithms to construct Voronoi diagrams, the most common being [Fortune' Algorithm](http://en.wikipedia.org/wiki/Fortune%27s_algorithm). Fortune's Algorithm uses O(nlogn) time.
 
-In my example, I have utilized an inbuilt method `d3.geom.voronoi` to compute the vertices of the polygons in the Voronoi diagram.
+In this example, I have utilized an inbuilt method: `d3.geom.voronoi` to compute the vertices of the polygons in the Voronoi diagram.
 
 ## The Motivation
 The clients of CVMFS (CERN Virtual Machine File System) would like to connect to mirror servers that are closer to them so as to reduce the latency in communication. To make decisions regarding which server is closest to a particular client, we are using Voronoi diagrams. So, if a client belongs to a cell C in the Voronoi diagram, it should be served by the server S corresponding to the cell C.
