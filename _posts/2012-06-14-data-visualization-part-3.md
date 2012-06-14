@@ -13,7 +13,7 @@ While the JavaScript visualization described in [Data Visualization: Part 2](htt
 I made use of matplotlib toolkits's Basemap for the background world map. This was really nice to use, with a whole bunch of projections available for plotting the map. I also found a great library called [py_geo_voronoi] (https://github.com/Softbass/py_geo_voronoi) that aids plotting Voronoi diagrams on map-sized plots. Utilizing one of this library's functions, I obtained the `Polygon` objects corresponding to each of the polygon in the Voronoi diagram. Then, I processed these polygons to get coordinates corresponding to the world map I had prepared. Polygon by polygon, I plotted them on the map.
 
 ## What's in the Code?
-The code for bringing this data on a world map and constructing Voronoi polygons is surprisingly small with the easy to use libraries! The full code along with the included libraries can be found [here]. Download the directory and run:
+The code for bringing this data on a world map and constructing Voronoi polygons is surprisingly small with the easy to use libraries! The full code along with the included libraries can be found [here](https://github.com/racheesingh/voronoi-map-py). Download the directory and run:
 
 	$ python2 server_locations.py < geolist_locations
 
