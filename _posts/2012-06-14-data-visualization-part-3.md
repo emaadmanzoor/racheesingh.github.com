@@ -22,7 +22,7 @@ Here is how the Voronoi diagram on a Basemap looks:
 <img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/plot.png" title="Voronoi diagram" align="left" width="100%"/>
 <img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/plot-large.png" title="Voronoi diagram" align="left" width="100%"/>
 
-## A "Closer" Look:
+## A "Closer" Look
 A closer look at the more cluttered parts of the map, here's US's zoomed-in view:
 <img src="https://github.com/racheesingh/racheesingh.github.com/raw/master/_posts/zoomin1.png" title="Voronoi diagram Zoom" align="left" width="100%"/>
 
