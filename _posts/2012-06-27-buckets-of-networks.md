@@ -3,7 +3,7 @@ layout: post
 title: "Buckets of Networks"
 description: ""
 category: 
-tags: [matplotlib, bar charts, Voronoi diagram]
+tags: [matplotlib, bar charts, Voronoi diagrams]
 ---
 {% include JB/setup %}
 This is in continuation with the previous post: [Data Visualization: Part 3](http://racheesingh.github.com/2012/06/14/data-visualization-part-3/). In the Python application that generates Voronoi polygons for the server locations, I needed to find how many networks in the world lie in which Voronoi cell. So here's what I did:
@@ -16,35 +16,6 @@ From the GeoIP Whois database, I read the IP addresses of networks (This is a hu
 ## Minor Issues:
 On checking the counts of the number of Voronoi cells I get and the original number of server sites, I realized that there was a difference between the two. I read the original list of servers which are a part of CERN's CDN from a configuration file and then I used Maxmind's GeoIP database to get their coordinates. Since this database gives information as to which country the IP belongs to, some servers have overlapping coordinates. So, while there were 105 servers initially, there remained 67 servers with unique coordinates. This is why, the method which is generating Voronoi polygons returns 67 polygons. 
 To clear a little bit of the mess, I wrote a method which takes in the original list of servers and merges the entries which have the same coordinates, keeping track of which servers correspond to the merged entries.
-
-This is how the method looks:
-
-```python
-def mergeDuplicates( PointsMap ):
-
-    uniquePointsMap = {}
-    blackList = frozenset( [ ] )
-    for name, coordinates in PointsMap.items():
-        # Checking if we blacklisted this name before
-        if name in blackList:
-            continue
-
-        finalName = name
-
-        for name1, coordinates1 in PointsMap.items():
-            if name == name1:
-                continue
-            if coordinates[0] == coordinates1[0] and \
-            coordinates[1] == coordinates1[1]:
-                # Add this name to blacklist so that
-                # we don't consider it again
-                blackList = blackList.union( [ name1 ] )
-                finalName = finalName + ", " + name1
-
-        uniquePointsMap[ finalName ] = coordinates
-
-    return uniquePointsMap
-```
 
 ## Buckets of Networks
 Using the dictionary that keeps count of how many networks fall into each Voronoi cell, I plotted a bar chart to depict how the networks are distributed and the load on each server.
