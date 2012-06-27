@@ -3,7 +3,7 @@ layout: post
 title: "Visualizing Data: Part 2"
 description: ""
 category: 
-tags: [d3.js, Maps, Visualization, Voronoi Diagrams]
+tags: [d3.js, Maps, visualization, Voronoi Diagram]
 ---
 {% include JB/setup %}
 This post is in continuation to the [Visualizing Data: Part 1] (http://racheesingh.github.com/2012/06/09/visualizing-data-part-1/) post. That post was about plotting the locations of servers on a world map (using JavaScript and the third part library [d3.js](http://d3js.org)). In this post, I will use d3.js's built-in functions to plot the Voronoi diagrams, dividing the map into regions/cells. 

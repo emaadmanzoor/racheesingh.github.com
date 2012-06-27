@@ -3,7 +3,7 @@ layout: post
 title: "Buckets of Networks"
 description: ""
 category: 
-tags: [matplotlib, bar charts, Voronoi diagrams]
+tags: [matplotlib, bar charts, Voronoi Diagram]
 ---
 {% include JB/setup %}
 This is in continuation with the previous post: [Data Visualization: Part 3](http://racheesingh.github.com/2012/06/14/data-visualization-part-3/). In the Python application that generates Voronoi polygons for the server locations, I needed to find how many networks in the world lie in which Voronoi cell. So here's what I did:
