@@ -25,7 +25,7 @@ Here is how it looks:
 ## Maximum load on which server?
 I also checked the size of each bucket to find the server which had maximum networks allocated to it.
 
-  The most loaded server: http://frontiercache.esc.qmul.ac.uk at index 7
+    The most loaded server: http://frontiercache.esc.qmul.ac.uk at index 7
 
 ## The Code
 The latest code for this application is [here](https://github.com/racheesingh/voronoi-map-py).
