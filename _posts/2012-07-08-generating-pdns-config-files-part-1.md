@@ -16,17 +16,17 @@ Like the name suggests, this file maps IP addresses to servers. For instance,
 Here, the IP address `193.109.172.0/22` is mapped to the pseudo IP address of the server. `127.0.0.1` is some server X which is geographically closest to this IP address.
 
 ## How to generate the file
-Until the last week, I had used the Whois database to get IP addresses of networks and check which networks fall into which Voronoi cells. Now I just converting these IPs from the Whois database into the CIDR format and printing a `:127.0.0.X` next to it where X is the serial number assigned to a server.
+Until the last week, I had used the Whois database to get IP addresses of networks and check which networks fall into which Voronoi cells. Now, I am just converting these IPs from the Whois database into the CIDR format and printing a `:127.0.0.X` next to it where X is the serial number assigned to a server.
 
 ## Getting the Required Data
-I parsed the XML-style formatted file containing information about the mirror servers which are a part of the CERN CDN. I had done this earlier, but all of that had to be changed to get more information for generating the PDNS config files. The code specifically for this purpose can be found on [this](https://github.com/racheesingh/preprocess-server-py) repository.
+I parsed the XML-style formatted file containing information about the mirror servers which are a part of the CERN CDN. I had done this earlier, but all of that had to be changed to get more information for generating the PDNS config files, for instance the Localsite field along with the domain name. The code which does this specifically can be found on [this](https://github.com/racheesingh/preprocess-server-py) repository.
 
 ## The Conversion
 This is how a typical entry in the Whois database looks:
 
      "1.0.0.0","1.0.0.255","16777216","16777471","AU","Australia"
 
-There is a `fromIP` = `1.0.0.0` and the 'toIP` is '1.0.0.255`. From this I had to get the network IP in CIDR format so as to write into the map-zonefile. After looking around, I found out about the [netaddr](http://packages.python.org/netaddr/tutorial_01.html) library which does the conversion from IP range to CIDR format IP addresses. For instance:
+There is a `fromIP` = `1.0.0.0` and the 'toIP` is '1.0.0.255`. From this I had to get the network IP in CIDR format so as to write into the map-zonefile. After looking around, I found out about the [netaddr](http://packages.python.org/netaddr/tutorial_01.html) library which does the conversion from IP range to CIDR format IP addresses. Like:
 
       >>> import netaddr
       >>> start_ip = "1.0.0.0"
@@ -36,7 +36,7 @@ There is a `fromIP` = `1.0.0.0` and the 'toIP` is '1.0.0.255`. From this I had t
       [IPNetwork('1.0.0.0/24')]
 
 
-I tried it out and found that this library is insanely slow. So, it was not practical to use it for a million conversions. 
+I tried it out and found that this library is quite slow. So, it was not practical to use it for a million conversions. 
 An alternative to netaddr was the the [cidrize](http://pypi.python.org/pypi/cidrize/0.6.3) library. It is much faster as compared to netaddr. Here is how it works:
 
    >>> from cidrize import cidrize
