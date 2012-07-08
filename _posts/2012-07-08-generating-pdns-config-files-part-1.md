@@ -1,22 +1,22 @@
 ---
 layout: post
-title: "Generating PDNS Config Files: Part 1"
+title: "Generating PDNS Config Files: Part1"
 description: ""
 category: 
 tags: [PDNS]
 ---
 {% include JB/setup %}
-While setting up PowerDNS with geobackend, there are a few configuration files that need to be supplied. In this post, I will talk about how I am trying to generate the geo-ip-map-zonefile. 
+While setting up PowerDNS with geobackend, there are a few configuration files that need to be supplied. In this post, I will talk about how I am trying to generate the `geo-ip-map-zonefile`. 
 
 ## What does the map-zonefile do?
 Like the name suggests, this file maps IP addresses to servers. For instance,
 
      193.109.172.0/22 :127.0.0.1
 
-Here, the IP address `193.109.172.0/22` is mapped to the pseudo IP address of the server. '127.0.0.1` is some server X which is geographically closest to this IP address.
+Here, the IP address `193.109.172.0/22` is mapped to the pseudo IP address of the server. `127.0.0.1` is some server X which is geographically closest to this IP address.
 
 ## How to generate the file
-So until the last week, I had used the Whois database to get IP addresses of networks and check which networks fall into which Voronoi cells. Now I just converting these IPs from the Whois database into the CIDR format and printing a `:127.0.0.X` next to it where X is the serial number assigned to a server.
+Until the last week, I had used the Whois database to get IP addresses of networks and check which networks fall into which Voronoi cells. Now I just converting these IPs from the Whois database into the CIDR format and printing a `:127.0.0.X` next to it where X is the serial number assigned to a server.
 
 ## Getting the Required Data
 I parsed the XML-style formatted file containing information about the mirror servers which are a part of the CERN CDN. I had done this earlier, but all of that had to be changed to get more information for generating the PDNS config files. The code specifically for this purpose can be found on [this](https://github.com/racheesingh/preprocess-server-py) repository.
