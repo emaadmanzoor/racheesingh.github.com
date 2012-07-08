@@ -39,13 +39,13 @@ There is a `fromIP` = `1.0.0.0` and the 'toIP` is '1.0.0.255`. From this I had t
 I tried it out and found that this library is quite slow. So, it was not practical to use it for a million conversions. 
 An alternative to netaddr was the the [cidrize](http://pypi.python.org/pypi/cidrize/0.6.3) library. It is much faster as compared to netaddr. Here is how it works:
 
-   >>> from cidrize import cidrize
-   >>> fromIP = "1.0.0.0"
-   >>> toIP = "1.0.0.255"
-   >>> ip_range = fromIP 
-   >>> ip_range = fromIP + "-" + toIP
-   >>> cidrize( ip_range )
-   [IPNetwork('1.0.0.0/24')]
+      >>> from cidrize import cidrize
+      >>> fromIP = "1.0.0.0"
+      >>> toIP = "1.0.0.255"
+      >>> ip_range = fromIP 
+      >>> ip_range = fromIP + "-" + toIP
+      >>> cidrize( ip_range )
+      [IPNetwork('1.0.0.0/24')]
 
 Using this I have tried to generate the map-zonefile. For 160000 or so entries even this library takes quite a lot of time.
 
