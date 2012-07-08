@@ -62,4 +62,4 @@ Here are the first few lines from the generated file:
 ---------
 
 ## Bringing Together Data Pre-processing and The Computation
-Until now, I was using many separate scripts to process the server names then get their location from GeoIP database and writing their outputs to files. These intermediate files were causing trouble. So, in place of writing the data into flat files, I am just building a dictionary of the data and passing it to the main method of the script that does all the computation. Further details and code are in this repo!
+Until now, I was using many separate scripts to process the server names followed by getting their location from the GeoIP database and writing the outputs to files. These intermediate files were causing trouble. So, in place of writing the data into flat files, I am just building a dictionary of the data and passing it to the main method of the script that does all the computation. Further details and code are in [this](https://github.com/racheesingh/voronoi-map-py) repository!
