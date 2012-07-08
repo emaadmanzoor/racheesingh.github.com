@@ -36,8 +36,8 @@ There is a `fromIP` = `1.0.0.0` and the 'toIP` is '1.0.0.255`. From this I had t
       [IPNetwork('1.0.0.0/24')]
 
 
-I tried it out and found that this library is quite slow. So, it was not practical to use it for a million conversions. 
-An alternative to netaddr was the the [cidrize](http://pypi.python.org/pypi/cidrize/0.6.3) library. It is much faster as compared to netaddr. Here is how it works:
+I tried `cidr_merge` and found that this library is quite slow. So, it was not practical to use it for a million conversions. 
+An alternative to netaddr suggested on StackOverflow was the the [cidrize](http://pypi.python.org/pypi/cidrize/0.6.3) library. It is much faster as compared to netaddr. Here is how it works:
 
       >>> from cidrize import cidrize
       >>> fromIP = "1.0.0.0"
@@ -59,6 +59,7 @@ Here are the first few lines from the generated file:
 
 
 # Sidebar
+---------
 
 ## Bringing Together Data Pre-processing and The Computation
 Until now, I was using many separate scripts to process the server names then get their location from GeoIP database and writing their outputs to files. These intermediate files were causing trouble. So, in place of writing the data into flat files, I am just building a dictionary of the data and passing it to the main method of the script that does all the computation. Further details and code are in this repo!
