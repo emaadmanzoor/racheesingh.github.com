@@ -6,7 +6,7 @@ category:
 tags: [PDNS]
 ---
 {% include JB/setup %}
-Taking up the issue stated in the (last)[http://racheesingh.github.com/2012/07/29/generating-pdns-config-file-part-2/] post, in this post I will elaborate on the optimization that reduced the time taken for generating the mapfile from 5 hours to one second approximately. 
+Taking up the issue stated in the [last](http://racheesingh.github.com/2012/07/29/generating-pdns-config-file-part-2/) post, in this post I will elaborate on the optimization that reduced the time taken for generating the mapfile from 5 hours to one second approximately. 
 
 ## Optimization
 * Offline conversion of the Whois CSV file to a SQLite database.
@@ -19,5 +19,5 @@ Here is the precise time taken:
      Time taken to get CIDR info 0.688957929611
 This is a huge improvement over the unacceptable 5 hour time before!
 
-All the changes are available on the (updated Github repository)[https://github.com/racheesingh/voronoi-webapp].
+All the changes are available on the [updated Github repository](https://github.com/racheesingh/voronoi-webapp).
 
